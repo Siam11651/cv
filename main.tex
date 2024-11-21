@@ -1,0 +1,57 @@
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+\PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
+
+\usepackage{settings}
+
+\DefineBibliographyStrings{english}{url={\textsc{url}}}
+
+\addbibresource{own-bib.bib}
+
+\mynames{Lim/Lian\bibnamedelima Tze,
+  Wong/Lian\bibnamedelima Tze,
+  Lim/Tracy,
+  Lim/L.\bibnamedelimi T.}
+
+\ifxetexorluatex
+  \usepackage{fontspec} 
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage[medium,bold]{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\fi
+
+\includecomment{fullonly}
+
+\leftheader{%
+  {\LARGE\bfseries\sffamily Mustafa Siam-ur-Rafique}
+
+  \makefield{\faEnvelope[regular]}{\href{mailto:siam11651@outlook.com}{\texttt{siam11651@outlook.com}}}
+  \makefield{{\scriptsize\simpleicon{github}}}{\!\href{https://github.com/Siam11651}{\texttt{Siam11651}}}
+  \makefield{{\scriptsize\faPhone}}{\texttt{+8801721869544}} \\
+  \makefield{{\scriptsize\simpleicon{leetcode}}}{\href{https://leetcode.com/u/siam11651}{\texttt{siam11651}}}
+  \makefield{{\scriptsize\simpleicon{codeforces}}}{\href{https://codeforces.com/profile/ArmoredTitan11651}{\texttt{ArmoredTitan11651}}}
+}
+
+\rightheader{~}
+\begin{fullonly}
+\photo[r]{photo}
+\photoscale{0.13}
+\end{fullonly}
+
+\title{Curriculum Vitae}
+
+\begin{document}
+\makeheaders[c]
+
+\input{about}
+\makerubric{employment}
+\makerubric{education}
+\input{projects}
+\makerubric{skills}
+
+\end{document}
